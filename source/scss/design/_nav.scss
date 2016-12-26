@@ -1,0 +1,419 @@
+.front #header .logo {
+  display: none;
+}
+
+.front #header.fixed .logo {
+  display: inline-block;
+}
+
+#header {
+  position: absolute;
+  top:0;left:0;right:0;
+  margin: auto;
+  opacity: 0;
+  background: rgba($nav-bkg, 1);
+  z-index: 10;
+  height: $nav-height-mobile;
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+  
+  @media screen and (min-width: $nav-break) {
+    height: $nav-height;
+    background: rgba($nav-bkg, 1);
+    position: fixed;
+  }
+  
+  .fixed & {
+    position: fixed;
+    opacity: 0;
+    background: rgba($nav-bkg, 0.8);
+    transform: translate3d(0,-90%,0);
+    transition: all 0.4s ease-in-out;
+
+    @media screen and (min-width: $med) {
+      background: rgba($nav-bkg, 1);
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    transition: all 0.4s ease-in-out;
+    z-index: 100003;
+  }
+
+  .left {
+    float: left;
+  }
+
+  .right {
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    .menu {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .t1 {
+    fill: white;
+  }
+
+  #logo.img-viewport {
+    display: block;
+    padding: 0;
+    position: relative;
+    height: $nav-height-mobile;
+    width: $nav-height-mobile;
+    transition: all 0.4s ease-in-out;
+    @media screen and (min-width: $nav-break){
+      width: $border;
+      height: $border;
+    }
+  }
+
+  #zach_logo {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -1px;
+    height: 100%;
+    width: auto;
+  }
+
+  .contact {
+    color: white;
+    vertical-align: middle;
+    margin-right: 30px;
+    display: none;
+
+    &:hover {
+      color: #c0c0c0;
+    }
+
+    @media screen and (min-width: $small) {
+      display: inline-block;
+    }
+  }
+
+
+  .hot-dog-bun {
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: $menu-text-color;
+    display: inline-block;
+  }
+
+  .hot-dog-bun {
+    display: inline-block;
+    text-align: center;
+    margin-left: 0.5em;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+    height: $nav-height-mobile;
+    width: $nav-height-mobile;
+    position: relative;
+
+    @media screen and (min-width: $nav-break){
+      // border: 1px solid black;
+      background-color: white;
+      height: $border;
+      width: $border + 5px;
+      margin-left: 0;
+    }
+
+    
+  }
+
+  .hot-dog {
+    width: 25px;
+    height: 0;
+    border: 2px solid $sub-primary;
+    vertical-align: middle;
+    display: inline-block;
+    transition: border-width 0.1s 0.4s ease, width 0.1s 0.4s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    right: 0;
+    left: 0;
+
+    .nav-open &, .nav-mobile-open & {
+      border-width: 0;
+      transition: border-width 0.1s 0.4s ease, width 0.1s 0.4s ease;
+    }
+
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      width: 25px;
+      top: -2px;
+      left: -20px; right: -20px;
+      margin: 0 auto;
+      border: 2px solid $sub-primary;
+      display: block;
+
+      &:hover {
+        border-color: white;
+      }
+    }
+
+    &:before {
+      @include translateY(8px);
+    }
+
+    &.active:before {
+      @include animation(c-clockwise-back 0.8s);
+
+      .nav-open &, .nav-mobile-open & {
+        @include animation(c-clockwise 0.8s);
+        @include translateY(0);
+        @include rotate(-45deg);
+      }
+    }
+
+    &:after {
+      @include translateY(-8px);
+    }
+
+    &.active:after {
+      @include animation(clockwise-back 0.8s);
+
+      .nav-open &, .nav-mobile-open & {
+        @include animation(clockwise 0.8s);
+        @include translateY(0);
+        @include rotate(45deg);
+      }
+    }
+  }
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $background-color;
+  text-align: center;
+  white-space: nowrap;
+  overflow-y: scroll;
+  padding: 3em;
+  padding-top: $nav-height-mobile;
+  display:none;
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .mobile-nav-social {
+    display: block;
+    position: absolute;
+    bottom: 5%;
+    right: 0;
+    left: 0;
+    bottom: 6%;
+
+    @media screen and (min-width: 480px){
+      position: relative;
+      padding-top: 1.5em;
+    }
+    @media screen and (min-width: 735px){
+      position: absolute;
+      padding-top: 0;
+      bottom: 20%;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0 1em;
+      a {
+        display: inline-block;
+        font-size: 2em;
+        padding: .3em .1em;
+        color: $grey;
+        @include transition(all 300ms ease 0s);
+      }
+      &:hover {
+        a{
+
+        }
+      }
+    }
+
+  }
+
+  .mobile-nav-text {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-left: 0;
+    list-style: none;
+
+    ul {
+      list-style: none;
+    }
+
+    li {
+      font-size: 2em;
+      margin: 0.5em 0;
+      &.active-page {
+        a {
+          color: $sub-primary;
+        }
+      }
+
+      a {
+        color: $menu-text-color;
+        @include transition(all 200ms ease 0s);
+        @include aktivgrotesk;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .nav-mobile-open & {
+    animation-name: mobileMenuOpen;
+    animation-duration: 900ms;
+    animation-timing-function: cubic-bezier(.19,1,.22,1);
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: both;
+    z-index: 100002;
+    display: block;
+    .mobile-nav-text {
+      animation-name: mobileTextOpen;
+      animation-duration: 900ms;
+      animation-timing-function: cubic-bezier(.19,1,.22,1);
+      animation-delay: 0ms;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: both;
+    }
+  }
+
+  .nav-mobile-closed & {
+    animation: mobileMenuClose 900ms cubic-bezier(.55,.055,.675,.19)0ms 1 normal both;
+    z-index: 1;
+    display: block;
+    .mobile-nav-text {
+      animation: mobileTextClose 900ms cubic-bezier(.55,.055,.675,.19)0ms 1 normal both;
+    }
+    .mobile-nav-social {
+      animation: mobileTextClose 500ms cubic-bezier(.55,.055,.675,.19)0ms 1 normal both;
+    }
+
+  }
+
+  @keyframes mobileMenuOpen {
+    0% {transform: translateY(-100%);}
+    100% {transform: translateY(0%);}
+  }
+
+  @keyframes mobileMenuClose {
+    50% {transform:translateY(0%)scaleY(1);}
+    75% {transform:translateY(0%)scaleY(0.3)}
+    100% {transform:translateY(200%);}
+  }
+
+  @keyframes mobileTextOpen {
+    0% {opacity: 0;}
+    10% {opacity: 0;transform: translateY(160%);}
+    15% {opacity: 1;}
+    100% {transform: translateY(0%);}
+  }
+
+  @keyframes mobileTextClose {
+    0% {transform: translateY(0%);}
+    50% {transform: translateY(160%);}
+    51% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+}
+
+.desktop-nav {
+  vertical-align: middle;
+  display: none;
+
+  @media screen and (min-width: $nav-break){
+    display: inline-block;
+  }
+
+  ul{
+
+    li {
+      position: relative;
+      display: inline-block;
+      opacity: 0;
+      transform: translateX(80px) translateZ(0);
+
+      &.active-page a {
+        color: $sub-primary;
+      }
+
+      &:not(.icon){
+        padding: 0 30px;
+      }
+
+      @for $i from 1 through $menu-items{
+        &:nth-child(n + #{$i}){
+          transition: transform 300ms ease 50ms*$i, opacity 300ms ease 50ms*$i;
+        }
+      }
+
+      &.icon a{
+        width: 40px;
+        text-align: center;
+        font-size: 1.2em;
+      }
+      &.no_hover a{
+        pointer-events: none;
+      }
+
+      a {
+        height: 79px;
+        display: block;
+        line-height: 80px;
+        // pointer-events: none;
+        transition: visibility 0 linear 1500ms;
+
+        @include aktivgrotesk;
+        font-weight: 700;
+        color: $menu-text-color;
+        @include transition(all 100ms ease 0s);
+        &:hover {
+          color: $menu-text-hover;
+          @include transition(all 100ms ease 0s);
+        }
+
+
+      }
+    }
+
+    .nav-open & li {
+
+      transform: translateX(0) translateZ(0);
+      opacity: 1;
+      a {
+        visibility: visible;
+        transition: visibility 0 linear;
+        // pointer-events: auto;
+      }
+    }
+  }
+}
+nav li.current-menu-item a {
+    text-decoration: line-through;
+}

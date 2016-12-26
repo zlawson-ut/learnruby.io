@@ -1,0 +1,85 @@
+/*-- Grid --*/
+$small: 480px !default;
+$med: 768px !default;
+$large: 1024px !default;
+$xlarge: 1440px !default;
+// $max-width: 1400px !default;
+$max-width: 1200px;
+
+$nav-break: $large;
+
+$gutter: 2 !default;
+$grid-gutter:5%;
+$grid-gutter-desktop: 2%;
+
+$grid-cols: 12 !default;
+
+$col-slug: col !default;
+//Layout
+// $horz-padding: 1em;
+// $horz-padding-desktop: 1.5em;
+
+$horz-padding:14px;
+$horz-padding-desktop:5%;
+$vert-padding:2.6em;
+$vert-padding-desktop:2em;
+$horz-padding-child: $horz-padding * 2;
+
+//Colors
+
+$grey-extra-light: #f6f6f6;
+$grey-lt: #F3F3F8;
+$grey-lt-text: #999999;
+$grey-md:rgb(121, 124, 129);
+$grey: #383C43;
+$grey-dk: #353940;
+$background-img: #E4E5EB;
+$white: #FFFFFF;
+
+$border-grey: #e8e8f2;
+$grey-text: #979797;
+$black: #151515;
+
+$gold: #B29E71;
+$gold-lt: #ECDFCC;
+$blue: #448CCB;
+
+
+$primary: $grey;
+$secondary: $grey-md;
+$sub-primary: $gold;
+$sub-primary-hover: $gold-lt;
+$background-color: $grey-lt;
+
+
+$font-color: $grey-md;
+$body-color: white;
+$header-color: $grey-dk;
+
+$navbkg: white;
+$nav-height: 80px;
+$nav-height-mobile: 60px;
+$nav-bkg: white;
+$menu-items:6;
+$menu-text-color: $primary;
+$menu-text-hover: $grey-md;
+
+$menu-width: 300px;
+$content-bkg: white;
+$link-hover: black;
+$border: 80px;
+
+
+$header-bkg: #808080;
+$line-color: $white;
+$post-padding: 12px;
+
+$section-border:0.8em solid black;
+
+//Font Weight
+$weight-light: 100;
+$weight-medium: 400;
+$weight-bold: 700;
+
+//Line height
+$line-height: 1.6;

@@ -1,0 +1,160 @@
+.title {
+  color: white;
+  @include aktivgrotesk;
+  font-size: 2.0em;
+  font-weight: 700;
+  padding-bottom: 0;
+
+  @media screen and (min-width:$med){
+    font-size: 2.6em;
+  }
+  span {
+    @extend span.gold;
+  }
+}
+
+.section-header-text {
+  font-size: 1.5em;
+  @include aktivgrotesk;
+  font-weight: 100;
+  color: $grey-dk;
+  margin-bottom: 1em;
+}
+
+.summary-main {
+  line-height: 1.5;
+  font-size: 0.9em;
+  @include aktivgrotesk;
+  color: $header-color;
+  font-weight: 100;
+}
+
+.summary-date {
+  font-size: 1em;
+  @include aktivgrotesk;
+  line-height: 1;
+  color: $header-color;
+  padding: 0;
+  padding-top: 0.2em;
+  height: 1em;
+  font-weight: 100;
+  &:before {
+    padding: 0;
+    border: none;
+    height: initial;
+  }
+}
+
+
+
+.photo-title {
+  font-size: 1.1em;
+  font-weight: 100;
+  @include aktivgrotesk;
+  color: $header-color;
+  padding-bottom: 0;
+}
+
+.meta {
+ @extend .photo-title;
+}
+.form-label {
+ font-size: 1.1em;
+ font-weight: 100;
+ @include aktivgrotesk; 
+}
+.date {
+  font-size: 1.5em;
+  @include aktivgrotesk; 
+  color: $grey-dk;
+  font-weight: 700;
+}
+@mixin tag {
+  color: $grey-md;
+  @include aktivgrotesk; 
+  font-weight: 100;
+  font-size: 0.8em;
+  @include transition(all 300ms ease-in-out 0s);
+
+  &:hover {
+    color: $grey-lt;
+  }
+}
+@mixin h1 {
+  @include aktivgrotesk; 
+  font-weight: $weight-medium;
+  color: $grey-md;
+  font-size: 1.2em;
+}
+@mixin h2 {
+  @include aktivgrotesk; 
+  font-weight: $weight-medium;
+  height: 2.8em;
+  display: inline-block;
+  vertical-align: middle;
+  color: $grey-dk;
+  font-size: 1.6em;
+
+
+  &:before {
+    content: "";
+    display: inline-block;
+    border-left: 1px solid;
+    height: 100%;
+    vertical-align: middle;
+    padding-right: 0.5em;
+  }
+}
+@mixin h3 {
+  @include aktivgrotesk; 
+  font-weight: $weight-bold;
+  font-size: 2em;
+  color: $grey-dk;
+}
+@mixin h4 {
+  @include aktivgrotesk; 
+  font-weight: $weight-bold;
+  font-size: 1.4em;
+  color: $grey-dk;
+}
+@mixin h5 {
+  @include aktivgrotesk; 
+  font-weight: $weight-light;
+  font-size: 1.4em;
+  color: $grey-md;
+}
+@mixin text-w-background{
+  @include aktivgrotesk; 
+  color: white;
+  background-color: $header-color;
+  font-size: inherit;
+  display: inline;
+  text-decoration: initial;
+  font-weight: $weight-medium;
+}
+@mixin h6 {
+  @include aktivgrotesk;
+  font-weight: $weight-bold;
+  color: $grey-dk;
+  font-size: 1em;
+}
+@mixin p {
+  color: $grey-md;
+  @include aktivgrotesk;
+  font-size: 1em;
+}
+@mixin list {
+  font-size: 1em;
+  color: $grey-md;
+  margin-left: 1em;
+}
+@mixin font_w_background {
+  @include aktivgrotesk;
+  color: white;
+  background-color: #353940;
+  display: inline;
+  padding-bottom: 0;
+  line-height: 1.6em;
+  font-weight: 700;
+  font-size: 1.1em;
+}

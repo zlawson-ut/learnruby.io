@@ -1,0 +1,40 @@
+// _images.scss
+.img-viewport {
+	position: relative;
+	padding-bottom: 67%;
+	overflow: hidden;
+}
+
+.svg-wrapper {
+	position: relative;
+	overflow: hidden;
+	padding-bottom: 2em;
+	width: 2em;
+	height: 0;
+	display: block;
+	@media screen and (min-width: $med){
+		width: 4em;
+	}
+	svg {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.img {
+	position: absolute;
+	width: auto;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.iframe {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+}

@@ -1,0 +1,81 @@
+#journal {
+        background-color: $background-color;
+        @include content;
+        @extend %vert-padding;
+        @extend %horz-padding;
+
+        .article-summary-wrapper {
+            padding: 2.5em 1em;
+            background-color: white;
+            text-align: center;
+            display: block;
+
+            h2 {
+                display: inline-block;
+            }
+            
+            .summary-title-wrapper {
+                margin: 0.7em 0 1em;
+                .summary-title{
+                    @include font_w_background();
+                }
+            }
+
+            .diamond-wrapper {
+                position: relative;
+                svg {
+                    width: 10%;
+                }
+            }
+            .meta {
+                display: inline-block;
+            }
+            &:hover {
+                background-color: $header-color;
+                .summary-date,.summary-title,.summary-main,.meta {
+                    color: white;
+                    @include transition(all 0.35s ease-in-out);
+                }
+                svg path{
+                    fill: white;
+                    @include transition(all 0.35s ease-in-out);
+                }
+                .bordered-text {
+                    color: $header-color;
+                    background-color: white;
+                    @include transition(all 0.35s ease-in-out);
+                }
+                @include transition(all 0.35s ease-in-out);
+            }
+        }
+        .photo-post-wrapper {
+            padding: 1em 1em 0 1em;
+            background-color: white;
+            text-align: center;
+            display: block;
+            .text-wrapper {
+                padding: 1em 0;
+            }
+            .img-viewport{
+                padding-bottom: 100%;
+                img {
+                    max-width: none;
+                }
+            }
+            &:hover {
+                background-color: $header-color;
+                @include transition(all 0.35s ease-in-out);
+                .photo-title,.summary-date {
+                    color: white;
+                    @include transition(all 0.35s ease-in-out);
+                }
+            }
+        }
+        .button-section {
+            text-align: center;
+            padding-top: 1.5em;
+            .button {
+                @include button($border: $header-color)
+            }
+        }
+    }

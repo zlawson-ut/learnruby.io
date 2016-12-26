@@ -1,0 +1,15 @@
+//_design.scss
+////////////////////////
+// Design Partials
+//
+// Separate your Layout from Design
+// Build sub folders and partials in this folder, with everything being imported, in cascading order, into this file.
+////////////////////////
+
+@import "footer";
+@import "front_page";
+@import "single";
+@import "nav";
+// @import "header";
+@import "journal";
+

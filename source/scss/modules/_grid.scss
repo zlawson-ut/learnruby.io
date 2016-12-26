@@ -1,0 +1,264 @@
+//_grid.scss
+
+.group {
+	&:before, &:after{
+		content: "";
+		display: table;
+	}
+	&:after{
+		clear: both;
+	}
+	zoom: 1;
+}
+
+/*-- Layout Classes --*/
+
+.max-width {
+	max-width: $max-width;
+	margin: 0 auto;
+}
+//masonry -->
+.item {
+	margin-bottom: $grid-gutter;
+	@media screen and (min-width: $small){
+		margin-bottom :$grid-gutter-desktop;
+	}
+}
+
+.gutter-sizer {
+	width: $grid-gutter;
+	@media screen and (min-width: $small){
+		width :$grid-gutter-desktop;
+	}
+}
+
+
+/*-- Set a max-width clas --*/
+
+// This is used for inner content
+.content {
+	margin: 0 auto;
+	max-width: 1400px;
+	@media screen and (min-width: $med)  {
+		padding: 0 1.5em;
+	}
+}
+
+.horz-spacing {
+	margin: 0 2em;
+}
+/*-- Define rules for floated grid --*/
+.float-grid {
+	width: 100%;
+
+	[class*='col-'] {
+		float: left;
+	}
+
+	&:before, &:after {
+		content:"";
+		display: table ;
+		clear:both;
+	}
+
+	[class*='col-'].centered {
+		margin: 0 auto;
+		float: none;
+	}
+}
+
+/*-- Define rules for inline grids --*/
+.inline-grid {
+	width: 100%;
+	text-align: justify;
+	position: relative;
+
+	[class*='col-'] {
+		display: inline-block;
+		text-align: left;
+		// margin-left: -0.26em;
+	}
+
+	&.centered {
+		text-align: center;
+	}
+
+}
+
+/*-- Build the grids --*/
+
+$single-col: (100% - ( ($grid-cols - 1 ) * $gutter )) / $grid-cols;
+// (100% - ( 12 -1 ) * gutter)) / 12
+// ((Other11Cols%) * gutter) / 12
+// (89%) * gutter / 12
+// ((89%) * 2) / 12
+// 14.833333
+
+
+@for $i from 1 through $grid-cols {
+	.#{$col-slug}-#{$i} { width: ($single-col * $i) + (( $i - 1 ) * $gutter) }
+}
+
+//s
+@media screen and (min-width: $small) {
+	@for $i from 1 through $grid-cols {
+		.#{$col-slug}-s-#{$i} { width: ($single-col * $i) + (( $i - 1 ) * $gutter) }
+	}
+	.col-s-hide { display: none;}
+	.col-s-show { display: inline-block;}
+
+}
+//m
+@media screen and (min-width: $med) {
+	@for $i from 1 through $grid-cols {
+		.#{$col-slug}-m-#{$i} { width: ($single-col * $i) + (( $i - 1 ) * $gutter) }
+	}
+	.col-m-hide { display: none;}
+	.col-m-show { display: inline-block;}
+}
+//l
+@media screen and (min-width: $large) {
+	@for $i from 1 through $grid-cols {
+		.#{$col-slug}-l-#{$i} { width: ($single-col * $i) + (( $i - 1 ) * $gutter) }
+	}
+	.col-l-hide { display: none;}
+	.col-l-show { display: inline-block;}
+}
+//xl
+@media screen and (min-width: $xlarge) {
+	@for $i from 1 through $grid-cols {
+		.#{$col-slug}-xl-#{$i} { width: ($single-col * $i) + (( $i - 1 ) * $gutter) }
+	}
+	.col-xl-hide { display: none;}
+	.col-xl-show { display: inline-block;}
+}
+
+// //Grid
+// .grid-container{
+// 	width: 100%; 
+// 	max-width: 1280px;
+// 	margin: auto;      
+// }
+// /*-- setting border box on all elements inside the grid --*/
+// .grid-container *{
+// 	box-sizing: border-box; 
+// }
+
+// /*-- our cleafix hack -- */ 
+// .row:before, 
+// .row:after {
+// 	content:"";
+// 	display: table ;
+// 	clear:both;
+// }
+
+// [class*='col-'] {
+// 	float: left; 
+// 	min-height: 1px; 
+// 	width: 8.33333333333%; 
+// 	/*-- our gutter -- */
+// 	padding-top: 16px;
+// 	padding-bottom: 16px;
+// 	@media screen and (min-width: $med) {
+// 		padding: 16px;
+// 	}
+// }
+// //half col-1 = 4.16666666666%
+// .col-1{ width: 8.33333333333%; }
+// .col-2{ width: 16.6666666667%; }
+// .col-3{ width: 25%;    }
+// .col-4{ width: 33.3333333333%; }
+// .col-5{ width: 41.6666666667%; }
+// .col-6{ width: 50%;   }
+// .col-7{ width: 58.3333333333%;}
+// .col-8{ width: 66.6666666666%;}
+// .col-9{ width: 75%;}
+// .col-10{ width: 83.3333333333%;}
+// .col-11{ width: 91.6666666666%;}
+// .col-12{ width: 100%;}
+// .col-hide {display: none;}
+
+// // .col-2-odd-first{margin-left: 4.16666666666%;}
+// // .col-2-odd-last{margin-right: 4.16666666666%;}
+
+// .outline, .outline *{
+// 	outline: 1px solid #F6A1A1; 
+// }
+
+// /*-- some extra column content styling --*/
+// [class*='col-'] > p {
+	
+// 	padding: 0;
+// }
+
+// @media screen and (min-width: 480px) {
+// 	.col-1-s{ width: 8.33333333333%; }
+// 	.col-2-s{ width: 16.6666666667%; }
+// 	.col-3-s{ width: 25%;    }
+// 	.col-4-s{ width: 33.3333333333%; }
+// 	.col-5-s{ width: 41.6666666667%; }
+// 	.col-6-s{ width: 50%;   }
+// 	.col-7-s{ width: 58.3333333333%;}
+// 	.col-8-s{ width: 66.6666666666%;}
+// 	.col-9-s{ width: 75%;}
+// 	.col-10-s{ width: 83.3333333333%;}
+// 	.col-11-s{ width: 91.6666666666%;}
+// 	.col-12-s{ width: 100%;}
+// 	.col-s-hide {  display: none;}
+// 	.col-show-s {display: inline-block;}
+// }
+
+// @media screen and (min-width: 768px) {
+// 	.col-1-m{ width: 8.33333333333%; }
+// 	.col-2-m{ width: 16.6666666667%; }
+// 	.col-3-m{ width: 25%;    }
+// 	.col-4-m{ width: 33.3333333333%; }
+// 	.col-5-m{ width: 41.6666666667%; }
+// 	.col-6-m{ width: 50%;   }
+// 	.col-7-m{ width: 58.3333333333%;}
+// 	.col-8-m{ width: 66.6666666666%;}
+// 	.col-9-m{ width: 75%;}
+// 	.col-10-m{ width: 83.3333333333%;}
+// 	.col-11-m{ width: 91.6666666666%;}
+// 	.col-12-m{ width: 100%;}
+// 	.col-m-hide {  display: none;}
+// 	.col-show-m {display: inline-block;}
+// }
+
+// @media screen and (min-width: 1024px) {
+// 	.col-1-l{ width: 8.33333333333%; }
+// 	.col-2-l{ width: 16.6666666667%; }
+// 	.col-3-l{ width: 25%;    }
+// 	.col-4-l{ width: 33.3333333333%; }
+// 	.col-5-l{ width: 41.6666666667%; }
+// 	.col-6-l{ width: 50%;   }
+// 	.col-7-l{ width: 58.3333333333%;}
+// 	.col-8-l{ width: 66.6666666666%;}
+// 	.col-9-l{ width: 75%;}
+// 	.col-10-l{ width: 83.3333333333%;}
+// 	.col-11-l{ width: 91.6666666666%;}
+// 	.col-12-l{ width: 100%;}
+// 	.col-l-hide {  display: none;}
+// 	.col-show-l {display: inline-block;}
+// }
+
+// @media screen and (min-width: 1440px) {
+// 	.col-1-xl{ width: 8.33333333333%; }
+// 	.col-2-xl{ width: 16.6666666667%; }
+// 	.col-3-xl{ width: 25%;    }
+// 	.col-4-xl{ width: 33.3333333333%; }
+// 	.col-5-xl{ width: 41.6666666667%; }
+// 	.col-6-xl{ width: 50%;   }
+// 	.col-7-xl{ width: 58.3333333333%;}
+// 	.col-8-xl{ width: 66.6666666666%;}
+// 	.col-9-xl{ width: 75%;}
+// 	.col-10-xl{ width: 83.3333333333%;}
+// 	.col-11-xl{ width: 91.6666666666%;}
+// 	.col-12-xl{ width: 100%;}
+// 	.col-xl-hide {  display: none;}
+// 	.col-show-xl {display: inline-block;}
+// }
+
+// .right {
+// 	float: right;
+// }

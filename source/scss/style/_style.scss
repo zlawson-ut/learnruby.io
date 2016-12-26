@@ -1,0 +1,302 @@
+//_style.scss
+
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  color: $font-color;
+  background-color: $body-color;
+  font-size: 16px;
+  padding-top: $nav-height-mobile;
+  // position: relative;
+  @include aktivgrotesk;
+
+  animation-name: load;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.19,1,.22,1);
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  @keyframes load {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @media screen and (min-width: $nav-break){
+    padding-top: $nav-height;
+  }
+  
+  @media screen and (min-width: $small) {
+    font-size: 1.1em;
+  }
+
+  .nav-mobile-open & {
+    height: 100%;
+  }  
+}
+
+.content-wrapper {
+  height: 100%;
+}
+
+strong {
+  font-weight: 700;
+}
+
+title {
+  display: inline;
+}
+
+.typed-cursor{
+  opacity: 1;
+  font-size: 1.8em;
+  vertical-align: middle;
+  @include animation(blink 0.7s infinite);
+}
+
+.bullet {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.description {
+  overflow: hidden;
+}
+
+.image-placeholder {
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+    );
+  opacity: 0.5;
+}
+
+.button-section {
+  margin: 0 auto;
+}
+
+%horz-padding {
+  padding-right: $horz-padding;
+  padding-left: $horz-padding;
+  @media screen and (min-width: $small){
+    padding-right: $horz-padding-desktop;
+    padding-left: $horz-padding-desktop;
+  }
+}
+%vert-padding {
+  padding-top: $vert-padding;
+  padding-bottom: $vert-padding;
+  @media screen and (min-width: $small){
+    padding-top: $vert-padding-desktop;
+    padding-bottom: $vert-padding-desktop;
+  }
+}
+
+.group {
+  zoom: 1;
+  &:before, &:after{
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+span.gold {
+  color: $gold;
+  font-weight: inherit;
+  font-size: inherit;
+}
+span.grey-dk {
+  color: $grey-dk;
+  font-weight: inherit;
+  font-size: inherit;
+}
+span.white {
+  color: white;
+  font-weight: inherit;
+  font-size: inherit;
+}
+.active-page {
+  color: $gold;
+}
+.item { 
+  transform: scale(0.5);
+  opacity: 0; 
+  transition: opacity 0.5s ease,transform 0.5s ease;
+}
+.item.show { 
+  transform: scale(1);
+  opacity: 1;
+}
+
+blockquote {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  color: $gold;
+  position: relative;
+  z-index: 1;
+  max-width: 500px;
+  line-height: 1.3em;
+  font-size: 1.2em;
+  font-weight: $weight-light;
+
+  p {
+    margin: 0;
+  }
+  &:after {
+    font-size: 6em;
+    content: "\f10d";
+    display: inline-block;
+    font-family: FontAwesome;
+    color: $background-img;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    z-index: -1;
+  }
+  @media screen and (min-width: $med){
+    padding: 1em 0;
+  }
+}
+p {
+  @include p_padding();
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+  &:only-of-type {
+    @include p_padding();
+  }
+  & + p {
+    margin-top: 0;
+  }
+}
+::selection {
+  background: $grey-md;
+  color: white;
+}
+::-moz-selection {
+  background: $grey-md;
+  color: white;
+}
+
+h1,.h1,.intro {
+  @include h1;
+}
+h2,.h2 {
+  @include h2;
+}
+h3,.h3 {
+  @include h3;
+}
+h4,.h4 {
+  @include h4;
+}
+h5,.h5 {
+  @include h5;
+}
+h6,.h6 {
+  @include h6;
+}
+em {
+  @include text-w-background;
+  font-style: normal;
+}
+img {
+  width: auto;
+  height: auto;
+}
+ul {
+  list-style-type: square;
+  @include list;
+  li {
+    line-height: $line-height;
+  }
+}
+ol {
+  font-size: 1em;
+  color: #6b727f;
+  margin-left: 1.3em;
+  li {
+    line-height: $line-height;
+  } 
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;  
+  color: $gold;
+  @include transition(all 0.25s ease-in-out);
+  &:hover {
+    color: $grey-md;
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 1.8rem 0;
+  border-top: 1px solid $line-color;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  padding: 0.75rem 0;
+  strong {
+    font-size: 1.5em;
+    font-weight: $weight-bold;
+  }
+}
+h1,h2,h3,h4,h5,h6,p {
+  &:first-child{
+    padding-top: 0;
+  }
+}
+h2,h3,h4,h5,h6 {
+  a {
+    color: inherit;
+  }
+}
+
+.entry-content img {
+  margin: 0 0 1.5em 0;
+}
+.alignleft, img.alignleft {
+  margin-right: 1.5em;
+  display: inline;
+  float: left;
+}
+.alignright, img.alignright {
+  margin-left: 1.5em;
+  display: inline;
+  float: right;
+}
+.aligncenter, img.aligncenter {
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+  clear: both;
+}
+
+pre{
+  @include p_padding();
+}
+
+.button {
+  @include button();
+}
+.textwidget {
+  display: inline;
+}

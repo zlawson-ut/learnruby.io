@@ -1,0 +1,14 @@
+# Ignore system files
+.DS_Store
+.idea
+.sass-cache
+
+
+# Ignore build libraries
+node_modules
+bower_components
+
+# Any archives that might appear
+*.zip
+*.tar
+*.gz

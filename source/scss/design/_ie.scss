@@ -1,0 +1,133 @@
+// hacks for ie8
+
+.lt-ie9 {
+
+    body {
+        min-width: 960px;
+    }
+
+    .small-12.medium-4.columns, .medium-12.large-4.columns, .panel.medium-4.columns {
+        width: 33.333%;
+        padding: 0 1%
+    }
+
+    #gallery {
+        .gallery-text {
+            width: 33.333%;
+        }
+
+        .gallery-image {
+            width: 66.666%;
+        }
+    }
+
+    #panels {
+        background: url('../img/header_1440w.jpg') center center no-repeat;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header_1440w.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../img/header_1440w.jpg', sizingMethod='scale')";
+
+    }
+
+    #pricing-ribbon {
+        display: none;
+    }
+
+    #sidebar {
+    	display: none;
+    }
+
+    .dot-navigation {
+    	display: none;
+    }
+
+    .top-nav.sticky-nav {
+        display: block;
+        background-color: #2d0f10;
+
+        .menu-button {
+            display: none;
+        }
+    }
+
+    #header {
+
+        .page-heading {
+        	display: none;
+        }
+
+		.top-nav {
+	        display: none;
+	    }
+
+	    #featured-text {
+	    	padding-top: 0px;
+	    }
+
+    }
+
+    #overview {
+    	padding: 30px 3% 60px;
+    }
+
+    #about {
+
+    	.about {
+    		padding: 30px 3%;
+    	}
+
+    	#about-nav {
+    		//display: none;
+    	}
+    }
+
+    #improvements {
+    	padding: 30px 3%;
+    }
+
+    #screenshots {
+    	padding: 30px 3%;
+
+    	.screenshot-container {
+    		height: 350px;
+    	}
+
+    	.scrollbar {
+    		//display: none;
+    	}
+    }
+
+    #signup {
+    	.option-group {
+    		margin: 10px;
+
+    		.error {
+    			display: none;
+    		}
+    	}
+
+    	#mce-EMAIL:before {
+    		content: "Email";
+    		height: 100%;
+    		position: absolute;
+    		top: -15px;
+    		color: #ffffff;
+    	}
+    }
+
+    #contact {
+
+    	#contact-request-form {
+    		display: inline-block;
+    		max-width: 720px;
+    	}
+    	.option-group {
+    		margin: 10px;
+
+    		.error {
+    			display: none;
+    		}
+    	}
+    }
+
+
+}

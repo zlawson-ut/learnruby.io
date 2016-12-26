@@ -1,0 +1,12 @@
+ #header-section{
+ 	background-color: $primary;
+ 	padding: 2.5em $horz-padding;
+ 	@include content;
+
+ 	@media screen and (min-width: $small){
+ 		padding-right: 25%;
+ 	}
+ 	@media screen and (min-width: $med){
+ 		padding: 6.5em $horz-padding-desktop;
+ 	}
+ }

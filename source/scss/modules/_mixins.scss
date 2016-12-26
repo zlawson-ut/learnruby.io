@@ -1,0 +1,58 @@
+// _mixins.scss
+
+
+@mixin vert-center {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%)translateX(-50%);
+}
+
+@mixin content (){
+	margin: 0 auto;
+	max-width: $max-width;
+}
+
+@mixin content-padding{
+	@include content;
+	@extend %vert-padding;
+	@extend %horz-padding;
+}
+
+@mixin button ($color: white, $border: white,$border-hover: $header-color, $background-color:$header-color, $background-hover: white, $text-hover: $header-color, $radius: 0){
+	@include transition(all 300ms ease 0s);
+	border: 2px $border solid;
+	border-radius: $radius;
+	background-color: $background-color;
+	color: $color;
+	display: inline-block;
+	font-size: 1em;
+	font-weight: 600;
+	padding: 11px 35px 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	@include aktivgrotesk;
+
+	&:hover{
+		background-color: rgba($background-hover, 0);
+		color: $text-hover;
+		border: 2px $border-hover solid;
+	}
+
+}
+
+@mixin blog-content {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+@mixin p_padding {
+	margin: 1.3rem 0
+}

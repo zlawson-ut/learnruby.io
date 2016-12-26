@@ -1,0 +1,132 @@
+/*
+======
+Footer
+======
+*/
+
+
+#footer {
+	@include content-padding;
+	padding-bottom: 0;
+	@media screen and (min-width: $med){
+		padding-bottom: $vert-padding;
+	}
+	.form-wrapper {
+		@media screen and (min-width: $med){
+			display: inline-block;
+			width: 50%;
+			vertical-align: middle;
+		}
+		.form-label {
+			padding-bottom: 0.5em;
+			display: inline-block;
+			.fa {
+				margin-right: 0.5em;
+			}
+		}
+	}
+	.footer-social {
+		text-align: center;	
+		margin-left: 0;
+		li {
+			display: inline-block;
+		}
+		a {
+			padding: 0.8em 0.5em;
+			display: inline-block;
+			color: $grey-lt-text;
+			font-size: 1.3em;
+			&:hover {
+				color: $sub-primary;
+			}
+		}
+		@media screen and (min-width: $med){
+			display: inline-block;
+			width: 49%;
+			vertical-align: bottom;
+			text-align: right;
+			a {
+				padding-bottom: 0;
+			}
+		}
+	}
+	form {
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		position: relative;
+		max-width: 400px;
+		font-size: 16px;
+		border-radius: 0;
+
+		@media screen and (min-width: $med){
+			margin: 0;
+		}
+		p {
+			padding: 0;
+		}
+		
+		input {
+			height: 50px;
+			padding: 0 0.5em;
+			background-color: white;
+			border: 1px solid $sub-primary;
+			text-align: left;
+			color: $grey;
+			font-size: 0.9em;
+			@include aktivgrotesk;
+			font-weight: 100;
+			width: 100%;
+			border-radius: 0;
+			text-align: center;
+			@media screen and (min-width: $small){
+				text-align: left;
+			}
+			@media screen and (min-width: $med){
+				padding: 0 1em;
+			}
+
+		}
+		input[type="submit"] {
+			font-size: 1em;
+			text-align: center;
+			@include aktivgrotesk;
+			background-color: $sub-primary;
+			color: white;
+			font-weight: 700;
+			text-transform: uppercase;
+			right: 0;
+			margin: 0px;
+			bottom: 0;
+			border-radius: 0;
+			@include transition(all 300ms ease 0s);
+
+			width: 100%;
+			display: block;
+			position: relative;
+			margin-top: 1em;
+
+			@media screen and (min-width: $small){
+				width: 40%;
+				position: absolute;
+				margin-top: 0;
+			}
+
+			&:hover {
+				background-color: $sub-primary-hover;
+				border-color: $sub-primary-hover;
+			}
+		}
+	}
+	label{
+		@include p_padding();
+		display: block;
+	}
+	input[type="email"],
+	input[type="text"],
+	input[type="button"],
+	input[type="submit"] {
+		-webkit-appearance: none;
+	}
+
+}
