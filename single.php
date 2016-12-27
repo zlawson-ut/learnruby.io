@@ -26,7 +26,15 @@ Template Name: Single
 
 			</section>
 			
-			<?php get_template_part('partials/single-meta-sections');  ?>
+			<section id="comments">
+				<hr/>
+				<h3>Comments:</h3>
+				<?php 
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
+				?>
+			</section> 
 
 		</div>
 

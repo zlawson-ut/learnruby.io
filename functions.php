@@ -126,75 +126,13 @@ function advertisement_post_type() {
 add_action( 'init', 'advertisement_post_type', 0 );
 
 
-add_action( 'init', 'create_advertisement_fields', 0 );
+add_action( 'init', 'create_custom_fields', 0 );
 
-function create_advertisement_fields () {
+function create_custom_fields () {
 	if(function_exists("register_field_group"))
 {
 	register_field_group(array (
-		'id' => 'acf_advertisements',
-		'title' => 'Advertisements',
-		'fields' => array (
-			array (
-				'key' => 'field_565a4c8876ae2',
-				'label' => 'Advertisement Label',
-				'name' => 'advertisement_label',
-				'type' => 'text',
-				'instructions' => 'Advertisement label',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_565a4ca676ae3',
-				'label' => 'Advertisement Link',
-				'name' => 'advertisement_link',
-				'type' => 'text',
-				'instructions' => 'This is the link that will wrap the advertisement',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'prepend' => '',
-				'append' => '',
-				'formatting' => 'none',
-				'maxlength' => '',
-			),
-			array (
-				'key' => 'field_565a4ccc76ae4',
-				'label' => 'Advertisement HTML',
-				'name' => 'advertisement_html',
-				'type' => 'textarea',
-				'instructions' => 'This is the advertisement HTML',
-				'required' => 1,
-				'default_value' => '',
-				'placeholder' => '',
-				'maxlength' => '',
-				'rows' => '',
-				'formatting' => 'html',
-			),
-		),
-		'location' => array (
-			array (
-				array (
-					'param' => 'post_type',
-					'operator' => '==',
-					'value' => 'advertisement',
-					'order_no' => 0,
-					'group_no' => 0,
-				),
-			),
-		),
-		'options' => array (
-			'position' => 'normal',
-			'layout' => 'no_box',
-			'hide_on_screen' => array (
-			),
-		),
-		'menu_order' => 0,
+
 	));
 }
 
