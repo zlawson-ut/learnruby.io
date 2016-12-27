@@ -30,11 +30,11 @@ body {
             font-weight: 100;
             text-align: center;
             font-size: 2.5em;
-            color: $grey;
+            color: $red;
             @include transition(all 300ms ease-in-out);
             
             &:hover {
-                color: $gold;
+                color: $red-light;
             }
             &:nth-of-type(n+3){
                 padding-top: 0.2em;

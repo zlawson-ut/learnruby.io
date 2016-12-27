@@ -31,8 +31,6 @@
 </div>
 </section>
 
-<?php get_template_part('partials/section-contact');  ?>	
-
 </main>			
 
 <?php get_footer();?>
