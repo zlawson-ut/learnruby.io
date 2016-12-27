@@ -234,10 +234,10 @@ ol {
 a {
   text-decoration: none;
   cursor: pointer;  
-  color: $gold;
+  color: $red;
   @include transition(all 0.25s ease-in-out);
   &:hover {
-    color: $grey-md;
+    color: $red-light;
     text-decoration: none;
   }
 }

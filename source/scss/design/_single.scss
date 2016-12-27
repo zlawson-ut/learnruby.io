@@ -101,7 +101,7 @@
 }
 
 .svg-fill {
-	fill: $grey-md;
+	fill: $white;
 }
 
 .tags {
@@ -131,6 +131,7 @@ div.sharedaddy div.sd-block {
 
 	h3.sd-title {
 		@include h3();
+		font-size: 1.4em;
 		margin: 0 0 0.5em;
 		padding: 0;
 		display: block;
