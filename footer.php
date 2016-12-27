@@ -16,10 +16,8 @@
 	</section>
 
 	<ul class="footer-social">
-		<li><a target="_blank" href="https://github.com/zjlawson" class="social-link"><i class="fa fa-github-alt"></i></a></li>
-		<li><a target="_blank" href="https://twitter.com/hello_zach" class="social-link"><i class="fa fa-twitter"></i></a></li>
-		<li><a target="_blank" href="https://www.linkedin.com/in/zachary-lawson-a85520aa" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-		<li><a target="_blank" href="https://instagram.com/zlawson_/" class="social-link"><i class="fa fa-instagram"></i></a></li>
+		<li><a target="_blank" href="https://twitter.com/learnruby.io" class="social-link"><i class="fa fa-twitter"></i></a></li>
+		<li><a target="_blank" href="mailto:hello@zacharylawson.com?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
 	</ul>
 </footer>
 <script>
