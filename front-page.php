@@ -8,7 +8,9 @@
 
 <main>	
 
-	<?php get_template_part('partials/section-header');  ?>	
+	<div id="header-section" itemprop="headline">
+		<h1 class="title"><?php the_title(); ?></h1>
+	</div>
 	
 	<section id="journal">
 		<div class="inline-grid">
@@ -26,7 +28,7 @@
 		<?php endif; //end of loop ?>
 	</div>
 	<div class="button-section col-12">
-		<a href="/blog" class="button">View Blog</a>
+		<a href="<?php echo site_url(); ?>/tutorials" class="button">View All</a>
 	</div>
 </div>
 </section>

@@ -16,7 +16,7 @@
 	</section>
 
 	<ul class="footer-social">
-		<li><a target="_blank" href="https://twitter.com/learnruby.io" class="social-link"><i class="fa fa-twitter"></i></a></li>
+		<li><a target="_blank" href="https://twitter.com/LearnRubyio" class="social-link"><i class="fa fa-twitter"></i></a></li>
 		<li><a target="_blank" href="mailto:hello@zacharylawson.com?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
 	</ul>
 </footer>

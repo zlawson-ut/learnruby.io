@@ -5,7 +5,11 @@
 	<section>
 		
 		
-		<?php get_template_part('partials/home-header');  ?>
+		<header id="header-section" class="header-archive" itemprop="headline">
+			<div class="article-header-content">
+				<h1 class="title">Tutorials</h1>
+			</div>
+		</header>
 
 		<section id="journal">
 			<div class="inline-grid">
