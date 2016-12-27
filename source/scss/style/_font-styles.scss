@@ -148,7 +148,7 @@
 @mixin font_w_background {
   @include aktivgrotesk;
   color: white;
-  background-color: #353940;
+  background-color: $primary;
   display: inline;
   padding-bottom: 0;
   line-height: 1.6em;

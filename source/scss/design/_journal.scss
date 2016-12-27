@@ -31,7 +31,7 @@
                 display: inline-block;
             }
             &:hover {
-                background-color: $header-color;
+                background-color: $primary;
                 .summary-date,.summary-title,.summary-main,.meta {
                     color: white;
                     @include transition(all 0.35s ease-in-out);
@@ -75,7 +75,7 @@
             text-align: center;
             padding-top: 1.5em;
             .button {
-                @include button($border: $header-color)
+                @include button()
             }
         }
     }
