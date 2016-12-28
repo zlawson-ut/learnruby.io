@@ -49,6 +49,7 @@ module.exports = function (grunt) {
           'source/js/nav.js',
           'source/js/masonry.js',
           'source/js/prism.js',
+          'source/js/post.js',
         ],
         dest: 'js/production.js',
       }
