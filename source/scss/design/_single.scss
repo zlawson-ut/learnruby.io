@@ -59,16 +59,17 @@
 		width: 100%;
 		height: 410px;
 		position: relative;
+		background-color: #3ccfcf;
 		.loader {
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translateY(-50%)translateX(-50%);
-			color: $primary;
+			color: $white;
 			p {
 			display: inline;
 			margin: 0;
-			color: $primary;
+			color: $white;
 			}
 		}
 	}

@@ -1,7 +1,7 @@
- // (function($) {
+ (function($) {
 
-	// $('#quiz').on("load", function() {
-	    console.log('loaded!');
-	// });
+	$('#quiz').on("load", function() {
+	    $('.loader').remove();
+	});
 
-// })( jQuery );
+})( jQuery );
