@@ -7,7 +7,6 @@
   margin-top: -0.3em;
   line-height: 1.5em;
   vertical-align: text-bottom;
-  font-family: Cousine;
 }
 
 .loading::after {
@@ -25,80 +24,80 @@
 }
 
 .loading.line::after {
-  content: "/\Aâ€“\A\\\A|";
+  content: "/\A–\A\\\A|";
   text-align: center;
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.line2::after {
-  content: "â•²\Aâ”‚\Aâ•±\Aâ”€";
+  content: "╲\A│\A╱\A─";
   text-align: center;
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.plus::after {
-  content: "â”½\Aâ•€\Aâ”¾\Aâ•";
+  content: "┽\A╀\A┾\A╁";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.dots::after {
-  content: "â ‹\Aâ ™\Aâ ¹\Aâ ¸\Aâ ¼\Aâ ´\Aâ ¦\Aâ §\Aâ ‡\Aâ ";
+  content: "⠋\A⠙\A⠹\A⠸\A⠼\A⠴\A⠦\A⠧\A⠇\A⠏";
   animation: spin10 1s steps(10) infinite;
 }
 
 .loading.dots2::after {
-  content: "â ‹\Aâ ™\Aâ š\Aâ ž\Aâ –\Aâ ¦\Aâ ´\Aâ ²\Aâ ³";
+  content: "⠋\A⠙\A⠚\A⠞\A⠖\A⠦\A⠴\A⠲\A⠳";
   animation: spin9 1s steps(9) infinite;
 }
 
 .loading.dots3::after {
-  content: "â‹®\Aâ‹°\Aâ‹¯\Aâ‹±";
+  content: "⋮\A⋰\A⋯\A⋱";
   text-align: center;
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.lifting::after {
-  content: "êœˆêœ\Aêœ‰êœŽ\AêœŠêœ\Aêœ‹êœ\AêœŒêœ‘";
+  content: "꜈꜍\A꜉꜎\A꜊꜏\A꜋꜐\A꜌꜑";
   animation: spin5 .5s steps(5) infinite alternate;
 }
 
 .loading.hamburger::after {
-  content: "â˜±\Aâ˜²\Aâ˜´";
+  content: "☱\A☲\A☴";
   animation: spin3 .3s steps(3) infinite alternate;
 }
 
 .loading.bar::after {
-  content: "â–\Aâ–Ž\Aâ–\Aâ–Œ\Aâ–‹\Aâ–Š\Aâ–‰";
+  content: "▏\A▎\A▍\A▌\A▋\A▊\A▉";
   animation: spin7 1s steps(7) infinite alternate;
 }
 
 .loading.bar2::after {
-  content: "â–\Aâ–‚\Aâ–ƒ\Aâ–„\Aâ–…\Aâ–†\Aâ–‡\Aâ–ˆ";
+  content: "▁\A▂\A▃\A▄\A▅\A▆\A▇\A█";
   animation: spin8 2s steps(8) infinite alternate;
 }
 
 .loading.circle::after {
-  content: "â—´\Aâ—·\Aâ—¶\Aâ—µ";
+  content: "◴\A◷\A◶\A◵";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.open-circle::after {
-  content: "â—œ\Aâ— \Aâ—\Aâ—ž\Aâ—¡\Aâ—Ÿ";
+  content: "◜\A◠\A◝\A◞\A◡\A◟";
   animation: spin6 .6s steps(6) infinite;
 }
 
 .loading.arrow::after {
-  content: "â†\Aâ†–\Aâ†‘\Aâ†—\Aâ†’\Aâ†˜\Aâ†“\Aâ†™";
+  content: "←\A↖\A↑\A↗\A→\A↘\A↓\A↙";
   animation: spin8 1s steps(8) infinite;
 }
 
 .loading.triangle::after {
-  content: "â—¢\Aâ—£\Aâ—¤\Aâ—¥";
+  content: "◢\A◣\A◤\A◥";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.triangles::after {
-  content: "â–¹â–¹â–¹â–¹â–¹\A â–¸â–¹â–¹â–¹â–¹\A â–¹â–¸â–¹â–¹â–¹\A â–¹â–¹â–¸â–¹â–¹\A â–¹â–¹â–¹â–¸â–¹\A â–¹â–¹â–¹â–¹â–¸";
+  content: "▹▹▹▹▹\A ▸▹▹▹▹\A ▹▸▹▹▹\A ▹▹▸▹▹\A ▹▹▹▸▹\A ▹▹▹▹▸";
   animation: spin6 1s steps(6) infinite;
 }
 
@@ -109,27 +108,27 @@
 }
 
 .loading.bullet::after {
-  content: " â—    \A   â—   \A    â—  \A     â— \A      â—\A     â— \A    â—  \A   â—   \A  â—    \A â—     ";
+  content: " ●    \A   ●   \A    ●  \A     ● \A      ●\A     ● \A    ●  \A   ●   \A  ●    \A ●     ";
   animation: spin10 1s steps(10) infinite;
 }
 
 .loading.bullseye::after {
-  content: "â—Žâ—Žâ—Ž\Aâ—‰â—Žâ—Ž\Aâ—Žâ—‰â—Ž\Aâ—Žâ—Žâ—‰";
+  content: "◎◎◎\A◉◎◎\A◎◉◎\A◎◎◉";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.rhomb::after {
-  content: "â—‡â—‡â—‡\Aâ—ˆâ—‡â—‡\Aâ—‡â—ˆâ—‡\Aâ—‡â—‡â—ˆ";
+  content: "◇◇◇\A◈◇◇\A◇◈◇\A◇◇◈";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.fish::after {
-  content: ">))'>\A â€ƒ>))'>\A â€ƒâ€ƒ>))'>\A â€ƒâ€ƒâ€ƒ>))'>\A â€ƒâ€ƒâ€ƒâ€ƒ>))'>\A â€ƒâ€ƒâ€ƒâ€ƒ<'((<\A â€ƒâ€ƒâ€ƒ<'((<\A â€ƒâ€ƒ<'((<\A â€ƒ<'((<\A <'((<\A";
+  content: ">))'>\A  >))'>\A   >))'>\A    >))'>\A     >))'>\A     <'((<\A    <'((<\A   <'((<\A  <'((<\A <'((<\A";
   animation: spin10 5s steps(10) infinite;
 }
 
 .loading.toggle::after {
-  content: "âŠ¶\AâŠ·";
+  content: "⊶\A⊷";
   animation: spin2 1s steps(2) infinite;
 }
 
@@ -139,49 +138,59 @@
 }
 
 .loading.time::after {
-  content: "ðŸ•\AðŸ•‘\AðŸ•’\AðŸ•“\AðŸ•”\AðŸ••\AðŸ•–\AðŸ•—\AðŸ•˜\AðŸ•™\AðŸ•š\AðŸ•›";
+  content: "🕐\A🕑\A🕒\A🕓\A🕔\A🕕\A🕖\A🕗\A🕘\A🕙\A🕚\A🕛";
   animation: spin12 3s steps(12) infinite;
   width: 1.3em;
 }
 
 .loading.hearts::after {
-  content: "ðŸ’›\AðŸ’™\AðŸ’œ\AðŸ’š";
+  content: "💛\A💙\A💜\A💚";
   animation: spin4 2s steps(4) infinite;
   width: 1.3em;
 }
 
 .loading.earth::after {
-  content: "ðŸŒ\AðŸŒŽ\AðŸŒ";
+  content: "🌍\A🌎\A🌏";
   animation: spin3 1s steps(3) infinite;
   width: 1.3em;
 }
 
 .loading.moon::after {
-  content: "ðŸŒ‘\AðŸŒ’\AðŸŒ“\AðŸŒ”\AðŸŒ•\AðŸŒ–\AðŸŒ—\AðŸŒ˜";
+  content: "🌑\A🌒\A🌓\A🌔\A🌕\A🌖\A🌗\A🌘";
   animation: spin8 2s steps(8) infinite;
   width: 1.3em;
 }
 
 .loading.monkey::after {
-  content: "ðŸ™ˆ\AðŸ™‰\AðŸ™Š";
+  content: "🙈\A🙉\A🙊";
   animation: spin3 1.5s steps(3) infinite;
   width: 1.3em;
 }
 
 .loading.runner::after {
-  content: "ðŸš¶\AðŸƒ";
+  content: "🚶\A🏃";
   animation: spin2 1s steps(2) infinite;
   width: 1.3em;
 }
 
 .loading.box-bounce::after {
-  content:"â––\Aâ–˜\Aâ–\Aâ–—";
+  content:"▖\A▘\A▝\A▗";
   animation: spin4 1s steps(4) infinite;
 }
 
 .loading.star::after {
-  content:"âœ¶\Aâœ¸\Aâœ¹\Aâœº\Aâœ¹\Aâœ·";
+  content:"✶\A✸\A✹\A✺\A✹\A✷";
   animation: spin6 1s steps(6) infinite;
+}
+
+.loading.matrix::after {
+  content:"░ ░░░░\A░░ ░░░\A░░░ ░░\A░░░░ ░";
+  animation: spin4 .5s steps(4) infinite alternate;
+}
+
+.loading.square::after {
+  content: "◰\A◳\A◲\A◱";
+  animation: spin4 1s steps(4) infinite;
 }
 
 .loading.words::after {

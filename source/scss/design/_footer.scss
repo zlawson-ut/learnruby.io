@@ -119,7 +119,7 @@ Footer
 		}
 	}
 	label{
-		@include p_padding();
+		@include p_margin();
 		display: block;
 	}
 	input[type="email"],

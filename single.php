@@ -72,12 +72,23 @@ Template Name: Single
 
 
 				<div id="article_body">
-					<?php if(get_field('iframe_url')): ?>
-						<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" width="100%" height="410"></iframe>
-					<?php endif; ?>
+					<div class="iframe-loader">
+						<div class="loader">
+							<p>Loading</p>
+							<span class="loading dots" aria-hidden="true" aria-label="Loading…"></span>
+						</div>
+						<?php if(get_field('iframe_url')): ?>
+							<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" width="100%" height="100%"></iframe>
+						<?php endif; ?>
+					</div>
 					
 					<?php if($next_post): ?>
-						<a href="<?php the_permalink($next_post); ?>"><?php echo get_the_title($next_post); ?></a>
+						<h4>Next Tutorial:</h4>
+						<a href="<?php the_permalink($next_post); ?>" class="next">
+							<span class="next__title"><?php echo get_the_title($next_post); ?></span>
+							<span class="next__link">Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+						</a>
+						<hr>
 					<?php endif; ?>
 
 					<?php the_content();?>
