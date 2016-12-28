@@ -76,6 +76,7 @@ Template Name: Single
 						<div class="loader">
 							<p>Loading</p>
 							<span class="loading dots" aria-hidden="true" aria-label="Loading…"></span>
+							<a href="https://twitter.com/LearnRubyio" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> @LearnRubyio</a>
 						</div>
 						<?php if(get_field('iframe_url')): ?>
 							<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" width="100%" height="100%"></iframe>
@@ -83,7 +84,7 @@ Template Name: Single
 					</div>
 					
 					<?php if($next_post): ?>
-						<h4>Next Tutorial:</h4>
+						<h4>Next Lesson:</h4>
 						<a href="<?php the_permalink($next_post); ?>" class="next">
 							<span class="next__title"><?php echo get_the_title($next_post); ?></span>
 							<span class="next__link">Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></span>

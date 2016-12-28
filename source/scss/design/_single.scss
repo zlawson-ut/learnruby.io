@@ -66,10 +66,15 @@
 			left: 50%;
 			transform: translateY(-50%)translateX(-50%);
 			color: $white;
+			text-align: center;
 			p {
 			display: inline;
 			margin: 0;
 			color: $white;
+			}
+			a {
+				color: $white;
+				display: block;
 			}
 		}
 	}
