@@ -1,0 +1,27 @@
+// this file was made to exclude these styles from the base style.scss which we pull into tiny mce which these styles were breaking
+html {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  position: relative;
+  @include aktivgrotesk;
+
+  animation-name: load;
+  animation-duration: 3s;
+  animation-timing-function: cubic-bezier(.19,1,.22,1);
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  @keyframes load {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  @media screen and (min-width: $nav-break){
+    padding-top: $nav-height;
+  }
+}

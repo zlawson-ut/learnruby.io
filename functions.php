@@ -102,4 +102,6 @@ if ( function_exists('register_sidebar') ) {
 	
 }
 
+add_editor_style( get_template_directory_uri() . '/css/wp_custom_fonts.css' );
+
 require_once( get_template_directory() . '/partials/theme-options.php' );
