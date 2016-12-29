@@ -105,3 +105,17 @@ if ( function_exists('register_sidebar') ) {
 add_editor_style( get_template_directory_uri() . '/css/wp_custom_fonts.css' );
 
 require_once( get_template_directory() . '/partials/theme-options.php' );
+
+add_filter( 'get_the_archive_title', function ( $title ) {
+
+    if( is_category() ) {
+    	$category = get_the_category();
+    	$category = $category[0]->name;
+        $title = 'Course: ' . $category;
+       // $title = single_cat_title( '', false );
+
+    }
+
+    return $title;
+
+});
