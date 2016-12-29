@@ -138,6 +138,7 @@
 			display: inline-block;
 			float: right;
 			width: 6em;
+			min-height: 170px;
 			@media screen and (min-width: $med){
 				width: 8em;
 			}
