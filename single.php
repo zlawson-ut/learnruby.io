@@ -72,16 +72,16 @@ Template Name: Single
 
 
 				<div id="article_body">
+					<?php if(get_field('iframe_url')): ?>
 					<div class="iframe-loader">
 						<div class="loader">
 							<p>Loading</p>
 							<span class="loading dots" aria-hidden="true" aria-label="Loading…"></span>
-							<a href="https://twitter.com/LearnRubyio" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i> @LearnRubyio</a>
+							<a href="https://twitter.com/LearnRubyio" target="_blank">@LearnRubyio</a>
 						</div>
-						<?php if(get_field('iframe_url')): ?>
 							<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" width="100%" height="100%"></iframe>
-						<?php endif; ?>
 					</div>
+					<?php endif; ?>
 					
 					<?php if($next_post): ?>
 						<h4>Next Lesson:</h4>
