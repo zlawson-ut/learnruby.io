@@ -16,9 +16,11 @@
 	</section>
 
 	<ul class="footer-social">
-		<li><a target="_blank" href="https://twitter.com/LearnRubyio" class="social-link"><i class="fa fa-twitter"></i></a></li>
+		<?php if(get_field('twitter_url', 'option')): ?>
+			<li><a target="_blank" href="<?php the_field('twitter_url', 'option'); ?>" class="social-link"><i class="fa fa-twitter"></i></a></li>
+		<?php endif; ?>
 		<?php if(get_field('email', 'option')): ?>
-			<li><a target="_blank" href="mailto:<?php the_field('email', 'option'); ?>?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
+			<li><a href="mailto:<?php the_field('email', 'option'); ?>?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
 		<?php endif; ?>
 	</ul>
 </footer>
