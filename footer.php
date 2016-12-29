@@ -17,7 +17,9 @@
 
 	<ul class="footer-social">
 		<li><a target="_blank" href="https://twitter.com/LearnRubyio" class="social-link"><i class="fa fa-twitter"></i></a></li>
-		<li><a target="_blank" href="mailto:hello@zacharylawson.com?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
+		<?php if(get_field('email', 'option')): ?>
+			<li><a target="_blank" href="mailto:<?php the_field('email', 'option'); ?>?subject=HiZachary" class="social-link"><i class="fa fa-paper-plane"></i></a></li>
+		<?php endif; ?>
 	</ul>
 </footer>
 <script>
