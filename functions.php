@@ -101,3 +101,5 @@ if ( function_exists('register_sidebar') ) {
 
 	
 }
+
+require_once( get_template_directory() . '/partials/theme-options.php' );

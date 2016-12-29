@@ -27,7 +27,6 @@
 .content-wrapper {
 	@include content-padding;
 	background-color: $background-color;
-	padding-bottom: 0;
 
 	h1 {
 		line-height: 1.3;
@@ -163,7 +162,7 @@
 
 .tags {
 	font-size: initial;
-
+	height: initial;
 	&:before {
 		display: none;
 	}
