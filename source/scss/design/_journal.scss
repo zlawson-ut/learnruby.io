@@ -32,7 +32,7 @@
             }
             &:hover {
                 background-color: $primary;
-                .summary-date,.summary-title,.summary-main p,.meta {
+                .summary-date,.summary-title,.summary-main,.meta {
                     color: white;
                     @include transition(all 0.35s ease-in-out);
                 }

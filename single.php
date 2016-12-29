@@ -15,6 +15,8 @@ Template Name: Single
 
 	<article itemscope itemType="http://schema.org/BlogPosting">
 		<meta itemprop="inLanguage" content="en-US"/>
+		<?php get_template_part('partials/social-meta');  ?>
+
 		<header id="header-section" class="header-single" itemprop="headline">
 			<div class="article-header-content">
 				
@@ -86,7 +88,7 @@ Template Name: Single
 					<?php endif; ?>
 					
 					<?php if(get_field('intro')): ?>
-						<?php the_field('intro'); ?>
+						<p><?php the_field('intro'); ?></p>
 					<?php endif; ?>
 					
 					<?php if($next_post): ?>

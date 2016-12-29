@@ -4,7 +4,7 @@
 		<div class="summary-title-wrapper"><h3 class="summary-title"><?php echo the_title(); ?></h3></div>
 		<div class="summary-main">
 			<?php if(get_field('intro')): ?>
-				<?php the_field('intro'); ?>
+				<p><?php the_field('intro'); ?></p>
 			<?php endif; ?>
 		</div>
 		<p class="meta"> <?php $category = get_the_category(); $firstCategory = $category[0]->cat_name; echo $firstCategory;?></p>

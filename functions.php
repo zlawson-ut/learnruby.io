@@ -119,3 +119,5 @@ add_filter( 'get_the_archive_title', function ( $title ) {
     return $title;
 
 });
+
+add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
