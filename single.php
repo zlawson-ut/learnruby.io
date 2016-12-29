@@ -73,9 +73,6 @@ Template Name: Single
 
 				<div id="article_body">
 					
-					<?php if(get_field('intro')): ?>
-						<?php the_field('intro'); ?>
-					<?php endif; ?>
 
 					<?php if(get_field('iframe_url')): ?>
 					<div class="iframe-loader">
@@ -88,11 +85,15 @@ Template Name: Single
 					</div>
 					<?php endif; ?>
 					
+					<?php if(get_field('intro')): ?>
+						<?php the_field('intro'); ?>
+					<?php endif; ?>
+					
 					<?php if($next_post): ?>
-						<h4>Next Lesson:</h4>
+						<h4>Next Tutorial:</h4>
 						<a href="<?php the_permalink($next_post); ?>" class="next">
 							<span class="next__title"><?php echo get_the_title($next_post); ?></span>
-							<span class="next__link">Continue <i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+							<span class="next__link">Continue <span class="heart" aria-hidden="true"></span></span>
 						</a>
 						<hr>
 					<?php endif; ?>

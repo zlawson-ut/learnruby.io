@@ -49,6 +49,7 @@
 	#article_body {
 		@include blog-content;
 		position: relative;
+		overflow: hidden;
 
 		ul, ol {
 			@include p_margin();
@@ -68,9 +69,9 @@
 			color: $white;
 			text-align: center;
 			p {
-			display: inline;
-			margin: 0;
-			color: $white;
+				display: inline;
+				margin: 0;
+				color: $white;
 			}
 			a {
 				color: $white;
@@ -84,7 +85,7 @@
 	}
 
 	.next {
-		@include p_margin();
+	    margin-bottom: -35px;
 		display: block;
 		&:hover {
 			.next__link {
@@ -108,6 +109,9 @@
 		color: $font-color;
 		margin-bottom: 10px;
 	}
+	.next__link {
+		margin-top: -38px;
+	}
 	
 	.meta-header {
 		@include blog-content;
@@ -117,7 +121,7 @@
 		}
 		@media screen and (min-width: $large){
 			max-width: none;
-			margin-bottom: -5.5em;
+			margin-bottom: -170px;
 		}
 		.date-wrapper, .share-img-wrapper {
 			vertical-align: middle;
@@ -142,7 +146,7 @@
 				font-size: 1em;
 				text-align: left;
 				padding-bottom: 10px;
-    			text-align: center;
+				text-align: center;
 				@media screen and (min-width: $med){
 					position: relative;
 					right: 0;
@@ -237,5 +241,25 @@ div.sharedaddy div.sd-block {
 	@extend %blog_section;
 	#disqus_thread{
 		@include p_margin();
+	}
+}
+
+
+//twiiter heart
+.heart {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100px;
+	height: 100px;
+	background: url("/learnRuby/wp-content/themes/learn-ruby/img/animation.png") no-repeat;
+	background-position: 0 0;
+	cursor: pointer;
+	transition: background-position 1s steps(28);
+	transition-duration: 0s;
+	margin-left: -22px;
+
+	&.is-active {
+		transition-duration: 1s;
+		background-position: -2800px 0;
 	}
 }
