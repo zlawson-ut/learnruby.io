@@ -18,12 +18,15 @@
   margin-bottom: 1em;
 }
 
-.summary-main {
+.summary-main p{
   line-height: 1.5;
   font-size: 0.9em;
   @include aktivgrotesk;
   color: $header-color;
   font-weight: 100;
+}
+.summary-main p:last-of-type {
+  margin: 0;
 }
 
 .summary-date {

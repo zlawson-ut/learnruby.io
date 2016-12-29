@@ -72,6 +72,11 @@ Template Name: Single
 
 
 				<div id="article_body">
+					
+					<?php if(get_field('intro')): ?>
+						<?php the_field('intro'); ?>
+					<?php endif; ?>
+
 					<?php if(get_field('iframe_url')): ?>
 					<div class="iframe-loader">
 						<div class="loader">

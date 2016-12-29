@@ -73,59 +73,6 @@ add_filter('excerpt_more', 'new_excerpt_more');
 
 remove_filter('the_excerpt', 'wpautop');
 
-/*
-* Creating a function to create our CPT
-*/
-
-function advertisement_post_type() {
-
-	$labels = array(
-		'name'                => _x( 'Advertisements', 'Post Type General Name', 'twentythirteen' ),
-		'singular_name'       => _x( 'Advertisement', 'Post Type Singular Name', 'twentythirteen' ),
-		'menu_name'           => __( 'Advertisements', 'twentythirteen' ),
-		'parent_item_colon'   => __( 'Parent Advertisement', 'twentythirteen' ),
-		'all_items'           => __( 'All Advertisements', 'twentythirteen' ),
-		'view_item'           => __( 'View Advertisement', 'twentythirteen' ),
-		'add_new_item'        => __( 'Add New Advertisement', 'twentythirteen' ),
-		'add_new'             => __( 'Add New', 'twentythirteen' ),
-		'edit_item'           => __( 'Edit Advertisement', 'twentythirteen' ),
-		'update_item'         => __( 'Update Advertisement', 'twentythirteen' ),
-		'search_items'        => __( 'Search Advertisement', 'twentythirteen' ),
-		'not_found'           => __( 'Not Found', 'twentythirteen' ),
-		'not_found_in_trash'  => __( 'Not found in Trash', 'twentythirteen' ),
-	);
-	
-// Set other options for Custom Post Type
-	
-	$args = array(
-		'label'               => __( 'advertisement', 'twentythirteen' ),
-		'description'         => __( 'Advertisement on each post', 'twentythirteen' ),
-		'menu_icon'           => 'dashicons-megaphone',
-		'labels'              => $labels,
-		'supports'            => array( 'revisions','title'),
-		'taxonomies'          => array( 'genres' ),
-		'hierarchical'        => false,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'capability_type'     => 'page',
-	);
-	
-	// Registering your Custom Post Type
-	register_post_type( 'advertisement', $args );
-
-}
-
-add_action( 'init', 'advertisement_post_type', 0 );
-
-
 add_action( 'init', 'create_custom_fields', 0 );
 
 function create_custom_fields () {
