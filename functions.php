@@ -296,3 +296,61 @@ add_filter( 'get_the_archive_title', function ( $title ) {
 });
 
 add_filter( 'jetpack_enable_opengraph', '__return_false', 99 );
+
+/**
+ * Create custom image sizes
+ */
+function zl_max_srcset_image_width() {
+  return 1380;
+}
+
+add_filter( 'max_srcset_image_width', 'zl_max_srcset_image_width', 10 , 2 );
+
+function zl_image_setup() {
+  add_image_size( 'sm_img', 360 );
+  add_image_size( 'md_img', 720 );
+  add_image_size( 'lg_img', 1024 );
+  add_image_size( 'xlg_img', 1380 );
+}
+add_action( 'after_setup_theme', 'zl_image_setup' );
+
+function zl_image_sizes( $sizes ) {
+  $sizes = array_merge( $sizes, array(
+    'sm_img' => __( 'Smaller' ),
+    'md_img' => __( 'Mediumer' ),
+    'lg_img' => __( 'Larger' ),
+    'xlg_img' => __( 'Xlarger' ),
+    ) );
+
+  return $sizes;
+}
+
+add_filter( 'image_size_names_choose', 'zl_image_sizes' );
+
+function zl_remove_default_image_sizes( $sizes) {
+  unset( $sizes['medium']);
+  unset( $sizes['large']);
+
+  return $sizes;
+}
+add_filter('intermediate_image_sizes_advanced', 'zl_remove_default_image_sizes');
+
+/**
+ * Output img with the correct sizes and srcsets
+ */
+
+function responsive_image($image_id, $image_size, $sizes){
+
+  // check the image ID is not blank
+  if($image_id != '') {
+
+    // set the default src image size
+    $image_src = wp_get_attachment_image_url( $image_id, $image_size );
+
+    // set the srcset with various image sizes
+    $image_srcset = wp_get_attachment_image_srcset( $image_id, $image_size );
+
+    // generate the markup for the responsive image
+    return 'src="'.$image_src.'" srcset="'.$image_srcset.'" sizes="' . $sizes . '"';
+  }
+}

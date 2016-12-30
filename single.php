@@ -64,8 +64,11 @@ Template Name: Single
 
 							<?php if (has_post_thumbnail( $post->ID ) ): ?>
 								<h3>Share:</h3>
-								<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
-								<img src="<?php echo $image[0]; ?>" alt="<?php echo wp_strip_all_tags(get_the_title())?>" rel="share">
+								<?php 
+									$image_id = get_post_thumbnail_id( $post->ID );
+									$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
+								?>
+								<img <?php echo responsive_image($image_id,'md_img','(min-width: 768px) 8em, 6em'); ?> alt="<?php echo wp_strip_all_tags(get_the_title())?>" rel="share">
 							<?php endif; ?>
 
 						</div>
