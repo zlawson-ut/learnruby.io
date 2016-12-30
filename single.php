@@ -68,7 +68,7 @@ Template Name: Single
 									$image_id = get_post_thumbnail_id( $post->ID );
 									$image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); 
 								?>
-								<img <?php echo responsive_image($image_id,'md_img','(min-width: 768px) 8em, 6em'); ?> alt="<?php echo wp_strip_all_tags(get_the_title())?>" rel="share">
+								<img <?php echo responsive_image($image_id,'md_img','(min-width: 768px) 8em, 6em'); ?> alt="<?php echo get_the_title(); ?>" rel="share">
 							<?php endif; ?>
 
 						</div>
