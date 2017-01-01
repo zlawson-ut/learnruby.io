@@ -19,7 +19,7 @@ add_theme_support('post-thumbnails');
 
 
 function zl_scripts() {
-	wp_enqueue_script( 'production_js', get_template_directory_uri() . '/js/production.min.js', array('jquery'), '', true );
+	wp_enqueue_script( 'production_js', get_template_directory_uri() . '/js/production.js', array('jquery'), '', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'zl_scripts' );
