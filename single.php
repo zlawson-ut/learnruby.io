@@ -88,7 +88,7 @@ Template Name: Single
 							<span class="loading dots" aria-hidden="true" aria-label="Loading…"></span>
 							<a href="https://twitter.com/LearnRubyio" target="_blank">@LearnRubyio</a>
 						</div>
-							<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" width="100%" height="100%"></iframe>
+					<iframe id="quiz" style="border: 0;" src="<?php the_field('iframe_url'); ?>" height="410" width="100%"></iframe>
 					</div>
 					<?php endif; ?>
 					
