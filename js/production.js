@@ -364,6 +364,7 @@ jQuery( document ).ready(function() {
 		    jQuery('.loader').remove();
 			console.log('quiz loaded!');
 		});
+		console.log('You got a quiz!');
 	}
 	if(jQuery('.next').length > 0){
 		jQuery(".next").mouseup(function() {
