@@ -1,6 +1,6 @@
 jQuery( document ).ready(function() {
 	if(jQuery('#quiz').length > 0){
-		jQuery('#quiz').on("load", function() {
+		jQuery('#quiz').ready(function() {
 		    jQuery('.loader').remove();
 			console.log('quiz loaded!');
 		});
