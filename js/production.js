@@ -370,5 +370,6 @@ Prism.languages.sql={comment:{pattern:/(^|[^\\])(?:\/\*[\w\W]*?\*\/|(?:--|\/\/|#
 	 			$(this).find('.heart').toggleClass("is-active");
 			});
 	 	}
+	 	console.log('this is the new script');
  	});
 })( jQuery );

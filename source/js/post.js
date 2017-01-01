@@ -10,5 +10,6 @@
 	 			$(this).find('.heart').toggleClass("is-active");
 			});
 	 	}
+	 	console.log('this is the new script');
  	});
 })( jQuery );
