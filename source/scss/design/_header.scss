@@ -14,6 +14,20 @@
 	    opacity: 0.7;
 	    z-index: 1;
 	}
+	h1,a {
+		z-index: 2;
+    	position: relative;
+	}
+	.button {
+		background-color: $white;
+		border-color: $white;
+		color: $red;
+		&:hover {
+			color: $white;
+			border-color: $white;
+			background-color: $red;
+		}
+	}
  	@media screen and (min-width: $small){
  		padding-right: 25%;
  	}

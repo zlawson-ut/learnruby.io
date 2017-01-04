@@ -10,11 +10,12 @@
 
 	<div id="header-section" itemprop="headline">
 		<h1 class="title"><?php the_title(); ?></h1>
+		<a href="<?php echo site_url(); ?>/learnRuby/basics/1-1-how-ruby-works/" class="button">Start Learning</a>
 	</div>
 	
 	<section id="journal">
 		<div class="inline-grid">
-			<h2 class="section-header-text">Newsfeed<span class="loading" aria-hidden="true" aria-label="Loading…"></span></h2>
+			<h2 class="section-header-text">Latest Tutorials<span class="loading" aria-hidden="true" aria-label="Loading…"></span></h2>
 			<div class="js-masonry" id="container">
 				<span class="gutter-sizer"></span>
 				<span class="col-12 col-s-6 col-m-4 grid-sizer"></span>
