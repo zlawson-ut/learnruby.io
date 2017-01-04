@@ -8,7 +8,7 @@
 ?>
 <!DOCTYPE html>
 <!-- Microdata markup added by Google Structured Data Markup Helper. -->
-<html <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?> class="">
 <head>
 	<title><?php $bloginfo = get_bloginfo( 'name' ); echo $bloginfo;?> </title>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">

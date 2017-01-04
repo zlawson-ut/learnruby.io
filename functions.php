@@ -29,7 +29,7 @@ function zl_styles()
 {
 	// wp_enqueue_style('fontawesome_css', get_template_directory_uri() . '/css/font-awesome.css');
 	// wp_enqueue_style('main_css', get_template_directory_uri() . '/css/embedded.css');
-	wp_enqueue_style('main_css', get_template_directory_uri() . '/css/main.min.css');
+	wp_enqueue_style('main_css', get_template_directory_uri() . '/css/main.css');
 	wp_enqueue_style('font_css', get_template_directory_uri() . '/css/fonts.min.css');
 }
 add_action( 'wp_enqueue_scripts', 'zl_styles' );

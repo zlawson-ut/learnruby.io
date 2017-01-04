@@ -22,6 +22,8 @@
 
 .article-header-content {
 	@include blog-content;
+	z-index: 2;
+    position: relative;
 }
 
 .content-wrapper {
