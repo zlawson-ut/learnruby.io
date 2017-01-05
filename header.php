@@ -19,6 +19,7 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri() . '/favicons/apple-touch-icon.png' ?>">
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() . '/favicons/favicon-32x32.png' ?>" sizes="32x32">
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri() . '/favicons/favicon-16x16.png' ?>" sizes="16x16">
+	
 	<link rel="manifest" href="<?php echo get_template_directory_uri() . '/favicons/manifest.json' ?>">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri() . '/favicons/safari-pinned-tab.svg' ?>" color="#ef4f4f">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri() . '/favicons/favicon.ico' ?>">
@@ -28,9 +29,9 @@
 	<meta name="theme-color" content="#ef4f4f">
 	
 	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#b29e71">
+	<meta name="msapplication-TileColor" content="#ef4f4f">
 	<meta name="msapplication-TileImage" content="/mstile-144x144.png">
-	<meta name="theme-color" content="#b29e71">
+	<meta name="theme-color" content="#ef4f4f">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 	<?php wp_enqueue_script("jquery"); ?>
